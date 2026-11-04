@@ -711,7 +711,7 @@
   function closeAll(except){ dds.forEach(function(d){ if(d!==except){ d.classList.remove('open'); d.querySelector('.dd-btn').setAttribute('aria-expanded','false'); } }); }
   dds.forEach(function(d){
     var b=d.querySelector('.dd-btn');
-    b.addEventListener('click',function(e){ e.stopPropagation(); var o=!d.classList.contains('open'); closeAll(d); d.classList.toggle('open',o); b.setAttribute('aria-expanded',o?'true':'false'); });
+    b.addEventListener('click',function(e){ e.stopPropagation(); var o=(e.pointerType==='mouse')?true:!d.classList.contains('open'); closeAll(d); d.classList.toggle('open',o); b.setAttribute('aria-expanded',o?'true':'false'); });
     d.addEventListener('pointerenter',function(e){ if(e.pointerType==='mouse'){ closeAll(d); d.classList.add('open'); b.setAttribute('aria-expanded','true'); } });
     d.addEventListener('pointerleave',function(e){ if(e.pointerType==='mouse'){ d.classList.remove('open'); b.setAttribute('aria-expanded','false'); } });
     d.addEventListener('focusout',function(e){ if(!d.contains(e.relatedTarget)){ d.classList.remove('open'); b.setAttribute('aria-expanded','false'); } });
