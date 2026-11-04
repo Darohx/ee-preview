@@ -326,8 +326,13 @@
     .breadcrumb { font-size:12px; color:var(--muted); margin-bottom:14px; }
     .breadcrumb a { color:var(--brg); }
     .case { padding: 56px 0; border-top:1px solid var(--border); }
-    .case-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:14px; margin-top:22px; }
-    .case-grid img { border-radius:10px; border:1px solid var(--brg-border); width:100%; height:260px; object-fit:cover; }
+    .case-grid { display:flex; gap:14px; margin-top:22px; max-width:960px; }
+    .case-grid figure { margin:0; min-width:0; overflow:hidden; border-radius:10px; border:1px solid var(--brg-border); background:var(--brg-light); }
+    .case-grid img { width:100%; height:100%; object-fit:cover; }
+    @media (max-width: 640px) {
+      .case-grid { flex-direction:column; }
+      .case-grid figure { flex:none !important; width:100%; max-height:560px; }
+    }
     .case a.ext { color:var(--brg); font-weight:500; }
     .related { padding:56px 0; background:var(--off-white); }
     .footer-twr { display:flex; align-items:center; gap:8px; font-family:'Inter',sans-serif; font-size:12.5px; color:rgba(255,255,255,0.7); }
@@ -364,7 +369,7 @@
     <p class="eyebrow">Derby business</p>
     <h2 class="section-title" style="font-size:clamp(22px,3vw,30px);">Dysin Insulation Ltd: workwear and golf polos</h2>
     <p class="section-sub" style="max-width:720px;">Dysin's logo embroidered on their hi-vis workwear, plus golf polos for a company golf tournament. More on our <a href="../workwear/" style="color:var(--brg);font-weight:500;">workwear</a> page.</p>
-    <div class="case-grid"><img src="../images/dysin-hi-vis-machine.jpg" alt="Dysin Insulation logo being embroidered on hi-vis workwear in Derby" loading="lazy"><img src="../images/dysin-golf-polos.jpg" alt="Embroidered golf polos for Dysin Insulation's golf tournament" loading="lazy"></div>
+    <div class="case-grid" style="max-width:960px;"><figure style="flex:0.6661 1 0;aspect-ratio:856/1285;"><img src="../images/dysin-hi-vis-machine.jpg" alt="Dysin Insulation logo being embroidered on hi-vis workwear in Derby" width="856" height="1285" loading="lazy" style="object-position:center 45%;"></figure><figure style="flex:1.722 1 0;aspect-ratio:1400/813;"><img src="../images/dysin-golf-polos.jpg" alt="Embroidered golf polos for Dysin Insulation's golf tournament" width="1400" height="813" loading="lazy" style="object-position:center 45%;"></figure></div>
   </div>
 </section>
 <section class="case">
@@ -372,7 +377,7 @@
     <p class="eyebrow">Derby business</p>
     <h2 class="section-title" style="font-size:clamp(22px,3vw,30px);">Mend on the Move: gym equipment sweat pads</h2>
     <p class="section-sub" style="max-width:720px;">Mend on the Move repair and reupholster gym equipment. We embroidered their client's logo onto sweat pads for upholstered gym equipment. More on our <a href="../personalisation/" style="color:var(--brg);font-weight:500;">one-off and custom items</a> page.</p>
-    <div class="case-grid"><img src="../images/mend-on-the-move-machine.jpg" alt="Logo being embroidered for Mend on the Move" loading="lazy"><img src="../images/mend-on-the-move-logo.jpg" alt="Finished embroidered logo for Mend on the Move" loading="lazy"><img src="../images/mend-on-the-move-gym-pad.jpg" alt="Embroidered sweat pad on gym equipment" loading="lazy"></div>
+    <div class="case-grid" style="max-width:960px;"><figure style="flex:0.5686 1 0;aspect-ratio:796/1400;"><img src="../images/mend-on-the-move-machine.jpg" alt="Logo being embroidered for Mend on the Move" width="796" height="1400" loading="lazy" style="object-position:center 45%;"></figure><figure style="flex:1.4941 1 0;aspect-ratio:1400/937;"><img src="../images/mend-on-the-move-logo.jpg" alt="Finished embroidered logo for Mend on the Move" width="1400" height="937" loading="lazy" style="object-position:center 45%;"></figure><figure style="flex:0.7539 1 0;aspect-ratio:585/776;"><img src="../images/mend-on-the-move-gym-pad.jpg" alt="Embroidered sweat pad on gym equipment" width="585" height="776" loading="lazy" style="object-position:center 45%;"></figure></div>
   </div>
 </section>
 <section class="case">
@@ -380,7 +385,7 @@
     <p class="eyebrow">Derby business</p>
     <h2 class="section-title" style="font-size:clamp(22px,3vw,30px);">Moda Interiors: management team polos</h2>
     <p class="section-sub" style="max-width:720px;">Polo shirts embroidered for the Moda Interiors management team. More on our <a href="../workwear/" style="color:var(--brg);font-weight:500;">workwear</a> page.</p>
-    <div class="case-grid"><img src="../images/moda-interiors-machine.jpg" alt="Moda Interiors logo being embroidered" loading="lazy"><img src="../images/moda-interiors-polo.jpg" alt="Embroidered polo shirt for Moda Interiors" loading="lazy"></div>
+    <div class="case-grid" style="max-width:657px;"><figure style="flex:0.5665 1 0;aspect-ratio:477/842;"><img src="../images/moda-interiors-machine.jpg" alt="Moda Interiors logo being embroidered" width="477" height="842" loading="lazy" style="object-position:center 45%;"></figure><figure style="flex:1.0418 1 0;aspect-ratio:1245/1195;"><img src="../images/moda-interiors-polo.jpg" alt="Embroidered polo shirt for Moda Interiors" width="1245" height="1195" loading="lazy" style="object-position:center 45%;"></figure></div>
   </div>
 </section>
 <section class="coverage" id="areas">
