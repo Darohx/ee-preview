@@ -336,7 +336,11 @@
     .case a.ext { color:var(--brg); font-weight:500; }
     .related { padding:56px 0; background:var(--off-white); }
     .footer-twr { display:flex; align-items:center; gap:8px; font-family:'Inter',sans-serif; font-size:12.5px; color:rgba(255,255,255,0.7); }
-    .footer-twr img { height:19px; width:auto; display:inline-block; }
+    .footer-twr { gap:4px; min-height:44px; text-decoration:none; }
+    .footer-twr strong { font-weight:600; }
+    .footer-twr .twr-tw { color:#FFFFFF; }
+    .footer-twr .twr-r { color:#B4C8EA; }
+    .footer-twr:hover strong { text-decoration:underline; }
     /* perf/a11y */
     .nav-links a.btn-primary, .mobile-menu a.btn-primary { color:#fff; }
     .nav-links .btn-primary { min-height:44px; display:inline-flex; align-items:center; }
@@ -642,7 +646,7 @@
     <div class="footer-bottom">
       <p>&copy; 2026 Eaton Embroidery. All rights reserved.</p>
       <p>Embroidered workwear, schoolwear, teamwear &amp; personalisation in Derby</p>
-      <a class="footer-twr" href="https://twresults.com"><span>Website and SEO by</span><img src="../images/twr-logo-dark.svg" alt="TW Results" width="90" height="19"></a>
+      <a class="footer-twr" href="https://twresults.com"><span>Website and SEO by</span> <strong><span class="twr-tw">TW</span> <span class="twr-r">Results</span></strong></a>
     </div>
   </div>
 </footer>
