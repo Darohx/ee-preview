@@ -365,6 +365,7 @@
     .form-consent label { font-size:14px; }
     .hero-image-box video { width:100%; height:100%; object-fit:cover; }
     .fh { font-size:11px; font-weight:500; letter-spacing:1.5px; text-transform:uppercase; color:rgba(255,255,255,0.65); margin-bottom:6px; font-family:'Inter',sans-serif; }
+    .coverage-card.hub h3 { color:var(--brg) !important; }
     .usp-h { font-size:15px; font-weight:500; color:#fff; margin-bottom:2px; }
     /* nav dropdowns */
     .dd-btn { background:none; border:none; font-family:'Inter',sans-serif; font-size:14px; color:var(--muted); cursor:pointer; padding:6px 0; display:flex; align-items:center; gap:4px; }
@@ -444,10 +445,10 @@
     <p class="eyebrow">Where we work</p>
     <h2 class="section-title">Derby, Nottingham and Burton</h2>
     <div class="coverage-grid">
-      <div class="coverage-card hub"><h4>📍 Chellaston, Derby</h4><p>Our base. Local collection available.</p></div>
-      <div class="coverage-card"><h4>Derby</h4><p>Workwear, schoolwear and teamwear across Derby.</p></div>
-      <div class="coverage-card"><h4>Nottingham</h4><p>Businesses, schools and clubs across Nottingham.</p></div>
-      <div class="coverage-card"><h4>Burton</h4><p>Serving Burton upon Trent and nearby.</p></div>
+      <div class="coverage-card hub"><h3 style="font-size:14px;font-weight:600;color:var(--black);margin-bottom:4px;">📍 Chellaston, Derby</h3><p>Our base. Local collection available.</p></div>
+      <div class="coverage-card"><h3 style="font-size:14px;font-weight:600;color:var(--black);margin-bottom:4px;">Derby</h3><p>Workwear, schoolwear and teamwear across Derby.</p></div>
+      <div class="coverage-card"><h3 style="font-size:14px;font-weight:600;color:var(--black);margin-bottom:4px;">Nottingham</h3><p>Businesses, schools and clubs across Nottingham.</p></div>
+      <div class="coverage-card"><h3 style="font-size:14px;font-weight:600;color:var(--black);margin-bottom:4px;">Burton</h3><p>Serving Burton upon Trent and nearby.</p></div>
     </div>
     <p class="section-sub" style="margin-top:20px;">Services: <a href="../workwear/" style="color:var(--brg)">workwear</a>, <a href="../schoolwear/" style="color:var(--brg)">schoolwear</a>, <a href="../sports-teamwear/" style="color:var(--brg)">sports &amp; teamwear</a>, <a href="../personalisation/" style="color:var(--brg)">personalisation</a>.</p>
   </div>
@@ -724,8 +725,8 @@
   dds.forEach(function(d){
     var b=d.querySelector('.dd-btn');
     b.addEventListener('click',function(e){ e.stopPropagation(); var o=!d.classList.contains('open'); closeAll(d); d.classList.toggle('open',o); b.setAttribute('aria-expanded',o?'true':'false'); });
-    d.addEventListener('mouseenter',function(){ if(window.matchMedia('(hover: hover)').matches){ closeAll(d); d.classList.add('open'); b.setAttribute('aria-expanded','true'); } });
-    d.addEventListener('mouseleave',function(){ if(window.matchMedia('(hover: hover)').matches){ d.classList.remove('open'); b.setAttribute('aria-expanded','false'); } });
+    d.addEventListener('pointerenter',function(e){ if(e.pointerType==='mouse'){ closeAll(d); d.classList.add('open'); b.setAttribute('aria-expanded','true'); } });
+    d.addEventListener('pointerleave',function(e){ if(e.pointerType==='mouse'){ d.classList.remove('open'); b.setAttribute('aria-expanded','false'); } });
     d.addEventListener('focusout',function(e){ if(!d.contains(e.relatedTarget)){ d.classList.remove('open'); b.setAttribute('aria-expanded','false'); } });
   });
   var hb=document.querySelector('.hamburger'), mm=document.getElementById('mm');
