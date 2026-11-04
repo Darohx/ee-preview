@@ -375,6 +375,19 @@
       .footer-col li a { padding:0; min-height:44px; display:flex; align-items:center; line-height:1.2; }
       .fh { margin-bottom:0; }
     }
+    .hero { padding: 48px 0 56px; }
+    .hero::before { top:-140px; right:-160px; width:460px; height:460px; }
+    @media (max-width: 900px) {
+      .hero { padding: 20px 0 36px; }
+      .hero::before { top:-110px; right:-130px; width:260px; height:260px; opacity:0.35; }
+      .hero-inner { gap: 28px; }
+      .hero h1 { margin-bottom: 12px; }
+      .hero-sub { margin-bottom: 14px; }
+      .hero-location { margin-bottom: 18px; }
+      .hero-btns { margin-bottom: 16px; }
+      .page-hero { padding: 20px 0 32px !important; }
+      .breadcrumb a { padding: 12px 0; }
+    }
     /* nav dropdowns */
     .dd-btn { background:none; border:none; font-family:'Inter',sans-serif; font-size:14px; color:var(--muted); cursor:pointer; padding:6px 0; display:flex; align-items:center; gap:4px; }
     .dd-btn:hover, .has-dropdown.open .dd-btn { color:var(--black); }
@@ -419,19 +432,12 @@
   <div class="container">
     <div class="hero-inner">
       <div>
-        <div class="hero-pill">Embroidery Derby &bull; Nottingham &bull; Burton upon Trent</div>
         <h1>Your logo.<br><em>Any garment.</em><br>Delivered.</h1>
         <p class="hero-sub">Embroidered workwear, schoolwear, sports teamwear and personalised gifts. We supply the garment <em>and</em> the embroidery, or stitch garments you already own.</p>
         <p class="hero-location">Based in <strong>Chellaston, Derby</strong> — serving businesses, schools and clubs across <strong>Derby, Nottingham and Burton upon Trent</strong>.</p>
         <div class="hero-btns">
           <a href="#quote" class="btn btn-primary">Get a free quote</a>
           <a href="#services" class="btn btn-outline">Our services</a>
-        </div>
-        <div class="hero-badges">
-          <span class="hero-badge">Competitive pricing</span>
-          <span class="hero-badge">Garments supplied or bring your own</span>
-          <span class="hero-badge">Quote within 24hrs</span>
-          <span class="hero-badge">No minimum order</span>
         </div>
       </div>
       <div>
